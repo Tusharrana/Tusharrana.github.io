@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- saved from url=(0272)http://greentekagro.weebly.com/ajax/apps/generateMap.php?map=google&elementid=770647405243282026&ineditor=0&control=3&width=auto&height=250px&overviewmap=0&scalecontrol=0&typecontrol=0&zoom=15&long=73.18121870000004&lat=22.3071588&domain=www&point=1&align=1&reseller=false -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link type="text/css" rel="stylesheet" href="css(3)"><style type="text/css">.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div{font-size:10px}</style><style type="text/css">@media print {  .gm-style .gmnoprint, .gmnoprint {    display:none  }}@media screen {  .gm-style .gmnoscreen, .gmnoscreen {    display:none  }}</style><style type="text/css">.gm-style{font-family:Roboto,Arial,sans-serif;font-size:11px;font-weight:400;text-decoration:none}.gm-style img{max-width:none}</style>
+		<title>Google Maps Output</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<meta charset="utf-8">
+		<style>
+			html, body, #mapContainer {
+				margin: 0;
+				padding: 0;
+				height: 100%;
+			}
+
+			#mapContainer {
+				width: 100%;
+				text-align: center;
+			}
+
+			a {
+				color: #06C;
+				text-decoration: none;
+			}
+
+			a:visited {
+				color: #06C;
+			}
+		</style>
+		<script type="text/javascript" src="js"></script>
+		<script type="text/javascript">
+			//<![CDATA[
+
+			// send a cross domain iframe mesage to the parent to resize the frame to this height
+			var resizeMessage = function(event) {
+				var imageHeight = document.getElementById('mapContainer').clientHeight;
+
+				window.parent.postMessage(
+					imageHeight,
+					'*'
+				);
+			};
+
+			function gLoad() {
+				var touchSupported = (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch),
+						forceTouch = false;
+
+				var myLatLng = new google.maps.LatLng(22.3071588, 73.18121870000004);
+				var mapOptions = {
+					scrollwheel: false,
+					center: myLatLng,
+					zoom: 15,
+					panControl: false, zoomControl: true, zoomControlOptions: { style: google.maps.ZoomControlStyle.SMALL },
+					overviewMapControl: false,
+					scaleControl: false,
+					mapTypeControl: false,
+					streetViewControl: false,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
+
+				if (touchSupported || forceTouch) {
+					mapOptions.draggable = false;
+					mapOptions.panControl = false;
+					mapOptions.scrollwheel = false;
+					mapOptions.zoomControlOptions = {style: google.maps.ZoomControlStyle.SMALL};
+					mapOptions.zoomControl = true;
+				}
+
+				// Use pre-v3.22 controls until the element can be updated with options for the new controls
+				google.maps.controlStyle = 'azteca';
+
+				var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+				var point = new google.maps.Marker({position: myLatLng, map: map});
+
+				// Maps loaded hidden (like in an accordion) don't center property as their width is often detected as 0.
+				// Detect when the iFrame "resizes" and reset the center
+				google.maps.event.addDomListener(window, 'resize', function() {
+					google.maps.event.trigger(map, 'resize');
+					map.setCenter(myLatLng);
+				});
+
+			}
+
+			//]]>
+		</script>
+
+	<script type="text/javascript" charset="UTF-8" src="common.js"></script><script type="text/javascript" charset="UTF-8" src="map.js"></script><script type="text/javascript" charset="UTF-8" src="util.js"></script><script type="text/javascript" charset="UTF-8" src="marker.js"></script><script type="text/javascript" charset="UTF-8" src="onion.js"></script><script type="text/javascript" charset="UTF-8" src="ViewportInfoService.GetViewportInfo"></script><script type="text/javascript" charset="UTF-8" src="stats.js"></script><script type="text/javascript" charset="UTF-8" src="controls.js"></script><script type="text/javascript" charset="UTF-8" src="vt"></script><script type="text/javascript" charset="UTF-8" src="AuthenticationService.Authenticate"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps/api/js/QuotaService.RecordEvent?1shttp%3A%2F%2Fgreentekagro.weebly.com%2Fajax%2Fapps%2FgenerateMap.php%3Fmap%3Dgoogle%26elementid%3D770647405243282026%26ineditor%3D0%26control%3D3%26width%3Dauto%26height%3D250px%26overviewmap%3D0%26scalecontrol%3D0%26typecontrol%3D0%26zoom%3D15%26long%3D73.18121870000004%26lat%3D22.3071588%26domain%3Dwww%26point%3D1%26align%3D1%26reseller%3Dfalse&amp;5e0&amp;6u1&amp;7sr848um&amp;callback=_xdc_._qyfng7&amp;token=71439"></script></head>
+	<body onload="gLoad();" style="margin: 0; padding: 0;">
+
+	<div id="mapContainer">
+		<div id="map" style="height: 250px; max-width: 100%; position: relative; overflow: hidden; transform: translateZ(0px); background-color: rgb(229, 227, 223);"><div class="gm-style" style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0;"><div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%; z-index: 0; cursor: url(&quot;https://maps.gstatic.com/mapfiles/openhand_8_8.cur&quot;) 8 8, default;"><div style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 100; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -96px; top: -188px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: -96px; top: 68px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 160px; top: -188px;"></div><div style="width: 256px; height: 256px; transform: translateZ(0px); position: absolute; left: 160px; top: 68px;"></div></div></div></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 101; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 102; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 103; width: 100%;"><div style="position: absolute; left: 0px; top: 0px; z-index: -1;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -96px; top: -188px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: -96px; top: 68px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 160px; top: -188px;"></div><div style="width: 256px; height: 256px; overflow: hidden; transform: translateZ(0px); position: absolute; left: 160px; top: 68px;"><canvas draggable="false" height="256" width="256" style="-webkit-user-select: none; position: absolute; left: 0px; top: 0px; height: 256px; width: 256px;"></canvas></div></div></div></div><div style="position: absolute; z-index: 0; transform: translateZ(0px); left: 0px; top: 0px;"><div style="overflow: hidden; width: 379px; height: 250px;"><img src="StaticMapService.GetMapImage" style="width: 379px; height: 250px;"></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 0;"><div aria-hidden="true" style="position: absolute; left: 0px; top: 0px; z-index: 1; visibility: inherit;"><div style="transform: translateZ(0px); position: absolute; left: -96px; top: -188px; transition: opacity 200ms ease-out;"><img src="vt(1)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: -96px; top: 68px; transition: opacity 200ms ease-out;"><img src="vt(2)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 160px; top: -188px; transition: opacity 200ms ease-out;"><img src="vt(3)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div style="transform: translateZ(0px); position: absolute; left: 160px; top: 68px; transition: opacity 200ms ease-out;"><img src="vt(4)" draggable="false" alt="" style="position: absolute; left: 0px; top: 0px; width: 256px; height: 256px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div></div></div><div style="position: absolute; left: 0px; top: 0px; z-index: 2; width: 100%; height: 100%;"></div><div style="position: absolute; left: 0px; top: 0px; z-index: 3; width: 100%; transform-origin: 0px 0px 0px; transform: matrix(1, 0, 0, 1, 0, 0);"><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 104; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 105; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 106; width: 100%;"></div><div style="transform: translateZ(0px); position: absolute; left: 0px; top: 0px; z-index: 107; width: 100%;"></div></div></div><div style="padding: 15px 21px; border: 1px solid rgb(171, 171, 171); font-family: Roboto, Arial, sans-serif; color: rgb(34, 34, 34); box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px; z-index: 10000002; display: none; width: 256px; height: 148px; position: absolute; left: 40px; top: 35px; background-color: white;"><div style="padding: 0px 0px 10px; font-size: 16px;">Map Data</div><div style="font-size: 13px;">Map data ©2016 Google</div><div style="width: 13px; height: 13px; overflow: hidden; position: absolute; opacity: 0.7; right: 12px; top: 12px; z-index: 10000; cursor: pointer;"><img src="mapcnt6.png" draggable="false" style="position: absolute; left: -2px; top: -336px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" style="z-index: 1000001; position: absolute; right: 167px; bottom: 0px; width: 121px;"><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a style="color: rgb(68, 68, 68); text-decoration: none; cursor: pointer; display: none;">Map Data</a><span>Map data ©2016 Google</span></div></div></div><div class="gmnoscreen" style="position: absolute; right: 0px; bottom: 0px;"><div style="font-family: Roboto, Arial, sans-serif; font-size: 11px; color: rgb(68, 68, 68); direction: ltr; text-align: right; background-color: rgb(245, 245, 245);">Map data ©2016 Google</div></div><div class="gmnoprint gm-style-cc" draggable="false" style="z-index: 1000001; -webkit-user-select: none; position: absolute; right: 95px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a href="https://www.google.com/intl/en-US_US/help/terms_maps.html" target="_blank" style="text-decoration: none; cursor: pointer; color: rgb(68, 68, 68);">Terms of Use</a></div></div><div draggable="false" class="gm-style-cc" style="-webkit-user-select: none; position: absolute; right: 0px; bottom: 0px;"><div style="opacity: 0.7; width: 100%; height: 100%; position: absolute;"><div style="width: 1px;"></div><div style="width: auto; height: 100%; margin-left: 1px; background-color: rgb(245, 245, 245);"></div></div><div style="position: relative; padding-right: 6px; padding-left: 6px; font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); white-space: nowrap; direction: ltr; text-align: right;"><a target="_new" title="Report errors in the road map or imagery to Google" href="https://www.google.com/maps/@22.3071588,73.1812187,15z/data=!10m1!1e1!12b1?source=apiv3&amp;rapsrc=apiv3" style="font-family: Roboto, Arial, sans-serif; font-size: 10px; color: rgb(68, 68, 68); text-decoration: none; position: relative;">Report a map error</a></div></div><div class="gmnoprint" draggable="false" controlwidth="20" controlheight="39" style="margin: 5px; -webkit-user-select: none; position: absolute; left: 0px; top: 0px;"><div class="gmnoprint" controlwidth="0" controlheight="0" style="opacity: 0.6; display: none; position: absolute;"><div title="Rotate map 90 degrees" style="width: 22px; height: 22px; overflow: hidden; position: absolute; cursor: pointer;"><img src="mapcnt6.png" draggable="false" style="position: absolute; left: -38px; top: -360px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div></div><div class="gmnoprint" controlwidth="20" controlheight="39" style="position: absolute; left: 0px; top: 0px;"><div style="width: 20px; height: 39px; overflow: hidden; position: absolute;"><img src="mapcnt6.png" draggable="false" style="position: absolute; left: -39px; top: -401px; width: 59px; height: 492px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px; max-width: none;"></div><div title="Zoom in" style="position: absolute; left: 0px; top: 2px; width: 20px; height: 17px; cursor: pointer;"></div><div title="Zoom out" style="position: absolute; left: 0px; top: 19px; width: 20px; height: 17px; cursor: pointer;"></div></div></div><div style="margin-left: 5px; margin-right: 5px; z-index: 1000000; position: absolute; left: 0px; bottom: 0px;"><a target="_blank" href="https://maps.google.com/maps?ll=22.307159,73.181219&amp;z=15&amp;t=m&amp;hl=en-US&amp;gl=US&amp;mapclient=apiv3" title="Click to see this area on Google Maps" style="position: static; overflow: visible; float: none; display: inline;"><div style="width: 66px; height: 26px; cursor: pointer;"><img src="google4.png" draggable="false" style="position: absolute; left: 0px; top: 0px; width: 66px; height: 26px; -webkit-user-select: none; border: 0px; padding: 0px; margin: 0px;"></div></a></div></div></div>
+	</div>
+
+	
+	
+	</body></html>
